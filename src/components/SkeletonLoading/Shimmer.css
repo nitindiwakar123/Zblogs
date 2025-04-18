@@ -1,0 +1,31 @@
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+      background-position: 200% 0; /* Start far to the left */
+    }
+    100% {
+      background-position: -200% 0; /* Move to the far right */
+    }
+  }
+  
+  /* Apply shimmer effect */
+  .shimmer {
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(240, 240, 240, 0.3) 25%, /* Light gray */
+      rgba(240, 240, 240, 0.8) 50%, /* Bright white */
+      rgba(240, 240, 240, 0.3) 75%  /* Light gray */
+    );
+    background-size: 200% 100%; /* Extra width for smooth movement */
+    animation: shimmer 1.5s infinite ease-in-out;
+  }
+  
+  /* Placeholder base color */
+  .gray {
+    background-color: #e0e0e0; /* Neutral gray */
+  }
+  
+  .image {
+    border-radius: 10px;
+  }

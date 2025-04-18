@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+
+    --font-poppins: Poppins, sans-serif;
+    --font-sans: Inter, sans-serif;
+
+    --leading-12: 3rem;
+
+    --color-custom-purple: #7C4EE4;
+    --color-custom-white: #FFFFFF;
+
+    --color-custom-purple: #7C4EE4;
+    --color-custom-white: #FFFFFF;
+    --color-custom-white-2: #F4F4F4;
+
+    --border-custom-purple: #7C4EE4;
+
+    --animate-rotate: rotate 1s linear infinite;
+    --animate-prixClipFix: prixClipFix 2s linear infinite;
+    --animate-placeHolderShimmer: placeHolderShimmer 1.5s linear infinite forwards;
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    @keyframes prixClipFix {
+        0% {
+            clipPath: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+        }
+        25% {
+            clipPath: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+        }
+        50% {
+            clipPath: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+        }
+        75% {
+            clipPath: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+        }
+        100% {
+            clipPath: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+        }
+    }
+
+    @keyframes placeHolderShimmer {
+        0% {
+            backgroundPosition: -50px 0,
+        }
+       100% {
+            backgroundPosition: 50px 0,
+        }
+    }
+}
