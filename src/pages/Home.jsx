@@ -102,7 +102,7 @@ function Home() {
                         >View All</Button>
                     </div>
                     <div className="w-[80%] mx-auto md:w-full grid grid-cols-1 lg:grid-cols-3 grid-flow-row justify-items-stretch items-stretch gap-10">
-                        {console.log(posts.length)}
+                        
                         {posts?.map((post, index) => {
                             if (index > posts.length - 4) {
                                 return <PostCard key={index} post={post} />; // Ensure to return PostCard here

@@ -66,10 +66,7 @@ function Post() {
                 title={currentPost.title}
                 description={currentPost.caption.length > 160 ? currentPost.caption.slice(0, 157).trim() + "..." : currentPost.caption}
             />
-
-            <div className="w-full mt-45 bg-transparent flex justify-center items-center">
-                {isDeleting && <Loader />}
-            </div>
+            {isDeleting && <Loader />}
 
             <div>
                 <section className="w-full py-5 lg:px-12 mb-10">

@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authService from "../appwrite/authService/auth";
 import { useForm } from "react-hook-form";
-import { Input, Button, Loader } from "./index";
+import { Input, Button, Loading } from "./index";
 import { login as storeLogin } from "../features/auth/authSlice";
 
 function Login() {
@@ -36,7 +36,7 @@ function Login() {
 
     return (
         <div className="w-full mx-auto bg-custom-white flex flex-col justify-center items-center gap-10 py-16 px-10">
-            {loggingIn && <Loader />}
+            {loggingIn && <Loading />}
             <div className="w-full flex justify-center items-center">
                 <h1 className="mx-auto text-4xl font-bold font-poppins text-custom-purple border-b-4 border-custom-purple py-2">Login</h1>
             </div>

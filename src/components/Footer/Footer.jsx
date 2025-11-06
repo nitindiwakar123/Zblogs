@@ -11,7 +11,7 @@ function Footer() {
     return (
         <footer className="w-full">
             <div>
-                {!authStatus && <section className="w-full relative bg-custom-purple px-10 md:px-32 py-24 overflow-hidden">
+                {!authStatus && <section className="w-full mt-20 relative bg-custom-purple px-10 md:px-32 py-24 overflow-hidden">
                     <div className="hidden lg:block w-1/2 absolute top-[-120px] left-0">
                         <img src={up} alt="" />
                     </div>

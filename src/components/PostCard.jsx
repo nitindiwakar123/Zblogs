@@ -23,7 +23,6 @@ function PostCard({ post }) {
                 </div>
                 
             }
-            {console.log("Image: ", image)}
             <div className="grid grid-rows-custom-2 justify-items-start gap-1">
                 <p className="flex items-end gap-2">
                     <span className="text-sm font-bold font-sans">{post.category}</span>

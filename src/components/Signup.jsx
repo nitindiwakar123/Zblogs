@@ -2,7 +2,7 @@ import authService from "../appwrite/authService/auth";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../features/auth/authSlice";
-import { Input, Button, Loader } from "./index";
+import { Input, Button, Loading } from "./index";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
@@ -33,10 +33,8 @@ function Signup() {
         setIsSigninUp(false);
     }
     return (
-        <div className="w-full mx-auto bg-custom-white flex flex-col justify-center items-center gap-10 py-16 px-10">
-            <div className="w-full mt-45 bg-transparent flex justify-center items-center">
-                {isSigninUp && <Loader />}
-            </div>
+        <div className="w-full mx-auto bg-custom-white flex flex-col justify-center items-center gap-10 py-16 px-10 relative">
+            {isSigninUp && <Loading />}
             <div className="w-full flex justify-center items-center">
                 <h1 className="mx-auto text-4xl font-bold font-poppins text-custom-purple border-b-4 border-custom-purple py-2">Signup</h1>
             </div>

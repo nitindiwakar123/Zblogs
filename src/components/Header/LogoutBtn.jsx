@@ -1,7 +1,7 @@
 import authService from "../../appwrite/authService/auth";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../features/auth/authSlice";
-import { Loader } from "../index";
+import { Loading } from "../index";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -29,11 +29,7 @@ function LogoutBtn() {
     }
     return (
         <>
-            {isLoggingOut &&
-                <div className="fixed top-0 w-full h-full bg-transparent flex justify-center items-center">
-                    <Loader />
-                </div>
-            }
+            {isLoggingOut && <Loading />}
             <button
                 className="text-gray-600 md:text-white bg-transparent md:bg-custom-purple flex justify-center items-center gap-2 md:hover:bg-violet-800 p-0 md:px-5 md:py-2 font-sans outline-none rounded-md transition-all duration-200 ease-linear"
                 onClick={handleLogout}>
